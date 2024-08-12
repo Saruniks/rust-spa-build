@@ -5,9 +5,9 @@ const project = new awscdk.AwsCdkConstructLibrary({
   cdkVersion: '2.1.0',
   defaultReleaseBranch: 'main',
   jsiiVersion: '~5.4.0',
-  name: 'rust-frontend-build',
+  name: 'rust-spa-build',
   projenrcTs: true,
-  repositoryUrl: 'https://github.com/sarunikss/rust-frontend-build.git',
+  repositoryUrl: 'https://github.com/sarunikss/rust-spa-build.git',
 
   // deps: [],                /* Runtime dependencies of this module. */
   // description: undefined,  /* The description is just a string that helps people understand the purpose of the package. */

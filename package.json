@@ -1,8 +1,8 @@
 {
-  "name": "rust-frontend-build",
+  "name": "rust-spa-build",
   "repository": {
     "type": "git",
-    "url": "https://github.com/sarunikss/rust-frontend-build.git"
+    "url": "https://github.com/sarunikss/rust-spa-build.git"
   },
   "scripts": {
     "build": "npx projen build",
@@ -68,7 +68,7 @@
   "publishConfig": {
     "access": "public"
   },
-  "version": "0.0.0",
+  "version": "0.0.2",
   "jest": {
     "coverageProvider": "v8",
     "testMatch": [
