@@ -18,7 +18,7 @@ export class RustSpaBuild extends constructs.Construct {
 
     constructor(scope: constructs.Construct, id: string, props: RustSpaBuildProps) {
         super(scope, id)
-        
+
         this.buildOutput = new pipeline.Artifact()
         this.buildImage = LinuxBuildImage.fromAsset(this, 'RustSpaBuildImage', {
             directory: path.join(__dirname, 'assets/build')
