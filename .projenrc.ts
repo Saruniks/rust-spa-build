@@ -15,7 +15,7 @@ const project = new awscdk.AwsCdkConstructLibrary({
   // packageName: undefined,  /* The "name" in package.json. */
 });
 
-let copyAssets = project.addTask('copy-assets', {
+project.addTask('copy-assets', {
   description: 'Copy assets to the lib directory',
   exec: 'cp -r src/assets lib/assets',
 });
