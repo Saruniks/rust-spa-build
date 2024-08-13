@@ -7,7 +7,7 @@ const project = new awscdk.AwsCdkConstructLibrary({
   jsiiVersion: '~5.4.0',
   name: 'rust-spa-build',
   projenrcTs: true,
-  repositoryUrl: 'https://github.com/sarunikss/rust-spa-build.git',
+  repositoryUrl: 'https://github.com/saruniks/rust-spa-build.git',
 
   // deps: [],                /* Runtime dependencies of this module. */
   // description: undefined,  /* The description is just a string that helps people understand the purpose of the package. */
