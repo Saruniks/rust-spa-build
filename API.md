@@ -142,6 +142,7 @@ const rustSpaBuildProps: RustSpaBuildProps = { ... }
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#rust-spa-build.RustSpaBuildProps.property.buildSpec">buildSpec</a></code> | <code>aws-cdk-lib.aws_codebuild.BuildSpec</code> | *No description.* |
+| <code><a href="#rust-spa-build.RustSpaBuildProps.property.projectName">projectName</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#rust-spa-build.RustSpaBuildProps.property.source">source</a></code> | <code>aws-cdk-lib.aws_codebuild.ISource</code> | *No description.* |
 
 ---
@@ -153,6 +154,16 @@ public readonly buildSpec: BuildSpec;
 ```
 
 - *Type:* aws-cdk-lib.aws_codebuild.BuildSpec
+
+---
+
+##### `projectName`<sup>Required</sup> <a name="projectName" id="rust-spa-build.RustSpaBuildProps.property.projectName"></a>
+
+```typescript
+public readonly projectName: string;
+```
+
+- *Type:* string
 
 ---
 

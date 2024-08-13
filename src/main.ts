@@ -6,6 +6,7 @@ import * as actions from 'aws-cdk-lib/aws-codepipeline-actions';
 import * as constructs from 'constructs';
 
 export interface RustSpaBuildProps {
+  readonly projectName: string;
   readonly source: ISource;
   readonly buildSpec: codebuild.BuildSpec;
 }
@@ -15,6 +16,7 @@ export class RustSpaBuild extends constructs.Construct {
   private readonly buildImage: codebuild.IBuildImage;
   private readonly source: ISource;
   private readonly buildSpec: codebuild.BuildSpec;
+  private readonly projectName: string;
 
   constructor(scope: constructs.Construct, id: string, props: RustSpaBuildProps) {
     super(scope, id);
@@ -25,6 +27,7 @@ export class RustSpaBuild extends constructs.Construct {
     });
     this.source = props.source;
     this.buildSpec = props.buildSpec;
+    this.projectName = props.projectName;
   }
 
   public getCodeBuildAction(sourceOutput: pipeline.Artifact): actions.CodeBuildAction {
@@ -38,7 +41,7 @@ export class RustSpaBuild extends constructs.Construct {
 
   private createCodeBuildProject(): codebuild.PipelineProject {
     const codeBuildProject = new codebuild.Project(this, 'RustSpaCodeBuild', {
-      projectName: 'RustSpa',
+      projectName: this.projectName,
       description: 'Rust Single Page Application',
       buildSpec: this.buildSpec,
       environment: {
