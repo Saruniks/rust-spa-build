@@ -47,6 +47,7 @@ export class RustSpaBuild extends constructs.Construct {
       environment: {
         buildImage: this.buildImage,
         privileged: true,
+        computeType: codebuild.ComputeType.LARGE,
       },
       source: this.source,
     });
